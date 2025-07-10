@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      const arr = [10, 20, 30];
+      console.log(arr);
+      console.log(arr[0]);
+      arr[0] = 99;
+      console.log(arr);
+      const arr2 = [1, "hello", true, [1, 2]];
+      //array can also store not only values but also string,boolean values,also an array
+      console.log(arr2);
+      console.log(typeof arr);
+      //array is also an object which has special properties
+      console.log(Array.isArray([1, 2]));
+      //checking shows that it is an Array
+      console.log(arr.length);
+      arr.push(100);
+      //syntax for adding element at the end of the array
+      console.log(arr);
+      arr.splice(0, 2);
+      /*
+      syntax for removing element
+      first 0 indicates index number which has to be removed
+      2 indicates no of elements which has to be removed from 0-th Index
+      */
+      console.log(arr);
+      //js has 2 types of loops
+      //while and for loop
+      let i = 1;
+      while (i <= 5) {
+        console.log(i);
+        i = i + 1;
+      }
+      for (let j = 1; j <= 5; j++) {
+        console.log(j);
+      }
+      let randomNumber = 0;
+      while (randomNumber < 0.4) {
+        randomNumber = Math.random();
+        console.log(randomNumber);
+      }
+      //In the above loop will run until it gets less than 0.4
+      console.log(randomNumber);
+      let arr3 = ["Appa", "Amma", "love"];
+      for (i = 0; i <= arr3.length - 1; i++) {
+        console.log(arr3[i]);
+      }
+      let sum = 0;
+      let arr4 = [1, 5, 6];
+      for (i = 0; i < arr4.length; i++) {
+        sum += arr4[i];
+      }
+      console.log(sum);
+      let empty = [];
+      for (i = 0; i < arr4.length; i++) {
+        empty.push(arr4[i] * 2);
+      }
+      console.log(empty);
+    </script>
+  </body>
+</html>

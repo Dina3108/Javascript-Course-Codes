@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      console.log(typeof true);
+      console.log(typeof "true");
+      true;
+      false;
+      console.log(3 > 5);
+      console.log(5 > 3);
+      console.log(5 === 5);
+      console.log(5 !== 5);
+      //if we use double equal to rather than triple equal to
+      console.log(5 == "5.00"); //gives wrong answer as it converts both sides to one type as string
+      console.log(5 === "5.00"); //gives correct answer
+      if (true) {
+        console.log("If true this will execute");
+      } else {
+        console.log("when false this will execute");
+      }
+      if (15 > 18) console.log("You can Drive");
+      else if (15 <= 16) console.log("Almost  There!");
+      else {
+        console.log("You Cannot Drive");
+        console.log("Better Luck Next Time");
+      }
+      const age = 18;
+      if (age >= 18)
+        console.log("Ready to Vote\nFuture Government is in your Hands");
+      else if (age >= 16) console.log("Almost There!");
+      else console.log("Good Luck! \n Next Time.");
+      //truthy and falsy statements in if else condition
+      if (10) console.log("Truthy"); //here 10 is converted into binary as 1 as true
+      if (0) console.log("Truthy");
+      else console.log("Falsy"); //here it is 0 , so it is converted into false
+      /*not only 0 other texts like below also converted into zero and considered as zero
+      1.0(zero)
+      2.null
+      3.NaN(Not a Number)
+      4.undefined
+      5.false
+      6.' '(Empty String)
+      */
+      let cartquantity = 10;
+      if (cartquantity) console.log("truthy");
+      if (!10) console.log("Truthy");
+      else console.log("Falsy");
+      console.log("text" / 5);
+      let variable1;
+      console.log(variable1);
+      //ternary operator
+      const result = !0 ? "True" : "False";
+      console.log(result);
+
+      false && console.log("Hello"); //AND Operator(Guard Operator) works only when both the conditions are true
+      //when the first condition is false means it will stop there not go to checking with AND Operator(&&)
+
+      let message = false && "Hello";
+      console.log(
+        message
+      ); /*Here the guard operator stops as it is false and the variable stores the first false condition*/
+      message = 0 && "hii";
+      console.log(message);
+      message = "love" && "life";
+      console.log(message);
+      //when both conditions are true the variable will store the second condition
+      message = 5 && "life"; //5 is true , so both are true
+      console.log(message);
+      //above guard operator works similar to AND Operator
+      message = 5 || 20;
+      console.log(message);
+      /*OR Operator(Default operator) works when one condition is true, here the first condition is true, so the variable stores the first condition itself*/
+      message = undefined || "Love You";
+      console.log(message);
+      /*Here in above default operator condition, the variable stores the second condition value*/
+
+      /* The above all ternary operator,guard operator and default operator works like shortcuts to if else statement*/
+    </script>
+  </body>
+</html>

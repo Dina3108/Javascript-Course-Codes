@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9A</title>
+  </head>
+  <body>
+    <button class="a-button">9A</button>
+    <button class="heads-button" onclick="coinGame('heads')">HEADS</button>
+    <button class="tails-button" onclick="coinGame('tails')">TAILS</button>
+    <p class="b-ans-p"></p>
+    <input
+      type="text"
+      placeholder="Name"
+      class="d-input"
+      onkeydown="
+      enter(event.key)"
+    />
+    <button onclick="nameFunc()">Submit</button>
+    <p class="d-ans-p"></p>
+    <input
+      type="text"
+      class="h-input"
+      onkeyup="
+    console.log(event);
+    typing(event.key)"
+    />
+    <p class="h-p"></p>
+    <script src="!9a.js"></script>
+  </body>
+</html>

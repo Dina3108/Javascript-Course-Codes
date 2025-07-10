@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      //object is used to group various values together
+      const product = {
+        name: "socks",
+        salary: 9000,
+      };
+      console.log(product);
+      console.log(typeof product); //it gives output and denotes as object
+      console.log(product.salary);
+      product.name = "Shoes";
+      console.log(product);
+      product.newproperty = true;
+      console.log(product);
+      delete product.newproperty;
+      console.log(product);
+      product.year = 1990;
+      console.log(product);
+
+      const product2 = {
+        name: "shirt",
+        // we can declare property using bracket notation also
+        ["different-price"]: "1 day",
+        //(or)
+        "different-price": "1 day",
+        //both are correct
+        rating: {
+          star: 4.5,
+          count: 87, //nested objects
+        },
+        //here we can use function also because in js function is also another type of value
+        fun: function function1() {
+          console.log("Function inside the Objects");
+        },
+      };
+      console.log(product2);
+      console.log(product2.name); //dot notation
+      console.log(product2["name"]); //bracket notation similar to dot notation used in most cases
+      /*   console.log(product2.different-price);
+            here it will show syntax error because dot notation consider that hyfine as subtraction symbol*/
+      console.log(product2["different-price"]);
+      console.log(product2.rating.star);
+      product2.fun(); //function calling but without any console but reflects in console
+
+      /*
+            functions which we used frequently such as console.log , math.random are also same like as above
+            console and math are objects log and random are its property
+            */
+
+      // here are to learn some built in function in JS are JSON and local storage
+      //JSON is similar to JS Object but both sides it has to be mentioned in double quotes
+
+      console.log(typeof console.log);
+
+      //syntax for converting js object to JSON
+      console.log(JSON.stringify(product2));
+      //here in console you can't see function
+      //because JSON won't support functions
+      console.log(typeof JSON);
+
+      //syntax for converting JSON to JS Object
+      //first store the JSON in a variable
+      const jsonconversion = JSON.stringify(product2);
+      console.log(JSON.parse(jsonconversion));
+
+      //like File Handling in C Programming
+      localStorage.setItem("Dinakar", "Sripathi");
+      console.log(localStorage.getItem("Dinakar"));
+      //local storage only supports strings
+      //so while using objects in local storage convert the object into string
+      /*
+            let check = {
+              c1: 0,
+              c2: 0,
+            };
+            console.log(check);
+            localStorage.setItem("Amma", JSON.stringify(check));
+            console.log(JSON.parse(localStorage.getItem("Amma"))); //this line only to check not necessary in absolute code
+            */
+      //In the above codes we have to initialize the object in the local Storage
+      //then using string we have to store the object in the JSON Function
+      //then using JSON.parse function convert the string into object and declare and store it in a Variable
+      /*use of this local storage is to store the values in a permanent storage
+            when we refresh the webpage all the data will be lost in JS program
+            but using local stroage we can store the needed variables using setItem and getItem
+      */
+
+      check = JSON.parse(localStorage.getItem("Amma"));
+      console.log(check);
+      /*  localStorage.removeItem("Amma"); //this is the code to remove the items stored in local storage
+            check = JSON.parse(localStorage.getItem("Amma"));
+            console.log(check);*/
+
+      console.log("dinakar".length);
+      console.log("dinakar".toUpperCase());
+
+      //we can copy object items by pass by reference method
+      const object1 = {
+        message: "hello",
+      };
+      const object2 = object1;
+      /*by the above method object2 not copies the entire object but copies the reference to that object and the stores the data in this object*/
+      object1.message = "Good Job!";
+      console.log(object1);
+      console.log(object2);
+      //we can't compare objects because you can see down here
+      const object3 = {
+        message: "Good Job!",
+      };
+      console.log(object1 === object3);
+      //the above result will show false because object is stored in the memory as references
+      //both object1 and object3 have different references
+      console.log(object1 === object2);
+      //the above result will show as true
+      //because previously both the objects are stored with same references
+      //so from above we can find that we can't compare objects
+
+      //there is another feature known as destructing
+      //const message = object3.meesage;
+      //shortcut for above code
+      const { message } = object3;
+      /*this code is shortcut for storing the content same as stored in the variable(message) from the object to the variable to message*/
+      console.log(message);
+      const object4 = {
+        message2: "Good Job!",
+        price: 799,
+      };
+      const { message2, price } = object4;
+      console.log(message2);
+      console.log(price);
+      //destructing is the easier way to take data out of an object
+
+      //shorthand property
+      const object5 = {
+        //message: message,
+        //in the above code it will store the reference in the above object
+        message,
+        /*
+        method: function func1()
+        {
+        console.log('Method');
+        }
+        */
+        //shortcut for the above function code is above
+        func1() {
+          console.log("Method");
+        },
+      };
+      console.log(object5);
+      object5.func1();
+    </script>
+  </body>
+</html>

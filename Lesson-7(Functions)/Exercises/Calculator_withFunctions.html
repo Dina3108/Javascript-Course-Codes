@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p>
+      <button onclick="console.log(operation('1'))">1</button>
+      <button onclick="console.log(operation('2'))">2</button>
+      <button onclick="console.log(operation('3'))">3</button>
+      <button onclick="console.log(operation('+'));">+</button>
+      <button onclick="console.log(calc=eval(calc));">=</button>
+    </p>
+    <p>
+      <button onclick="console.log(operation('4'))">4</button>
+      <button onclick="console.log(operation('5'))">5</button>
+      <button onclick="console.log(operation('6'))">6</button>
+      <button onclick="console.log(operation('-'));">-</button>
+      <button onclick="console.log(operation('.'))">.</button>
+    </p>
+    <p>
+      <button onclick="console.log(operation('7'))">7</button>
+      <button onclick="console.log(operation('8'))">8</button>
+      <button onclick="console.log(operation('9'))">9</button>
+      <button onclick="console.log(operation('*'));">*</button>
+      <button onclick="console.log(operation('0'));">0</button>
+    </p>
+    <p>
+      <button onclick="console.log(operation('10'))">10</button>
+      <button onclick="console.log(operation('100'))">100</button>
+      <button onclick="console.log(operation('1000'))">1000</button>
+      <button onclick="console.log(operation('/'));">/</button>
+      <button
+        onclick="calc=' ',console.log(calc),console.log('Calculations Cleared');"
+      >
+        C
+      </button>
+    </p>
+    <script>
+      let calc = " ";
+      function operation(op) {
+        return (calc += op);
+      }
+    </script>
+  </body>
+</html>

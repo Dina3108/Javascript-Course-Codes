@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <button class="js-button">Second button</button>
+
+    <script>
+      /*
+        //DOM is an another built-in object
+        document.body.innerHTML = "Vanakkam!";
+        document.title = "Good Job!";
+        console.log(document.title);
+        document.title = "DOM";
+        console.log(document.body);
+        console.log(typeof document.body);
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = "Changed!";
+
+      document.body.innerHTML = "<button>Good Job!</button>";
+        //like above DOM combines both JS and HTML
+        */
+
+      //there is an another feature in JS knows as Query Selector
+      console.log(document.querySelector("button"));
+      //query selector takes out the selective element from HTML to JS
+      console.log(document.querySelector("button").innerHTML);
+      //by using innerHTML we can access the content in that selected HTML element
+      document.querySelector("button").innerHTML = "Good Job! changed";
+      //we can change content in HTML also
+      console.log(document.querySelector("button").innerHTML);
+      //js code for selecting specifically named elements in HTML
+      console.log(document.querySelector(".js-button"));
+
+      const buttonElement = document.querySelector(".js-button");
+      console.log(buttonElement);
+    </script>
+  </body>
+</html>

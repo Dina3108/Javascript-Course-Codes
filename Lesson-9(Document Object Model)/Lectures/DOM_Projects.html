@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM-Projects</title>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button class="js-button1" onclick="Subscribe()">Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping</p>
+    <p>Orders over $40 = FREE Shipping</p>
+    <input
+      type="search"
+      placeholder="Cost of Order"
+      class="cost-input"
+      onkeydown="console.log(event); //this will give the all information aboutthe keypress 
+      console.log(event.key); //this will only the specific information needed 
+      costkeydown(event);
+  "
+    />
+    <button onclick="Calculation();">Calculate</button>
+    <p class="cost-result"></p>
+    <script>
+      String(25);
+      console.log("25" - 5);
+      //here while doing calculations JS will automatically convert numberString into number while Calculation
+      console.log("25" + 5);
+      //but while doing addition it will add as string
+      window.document;
+      window.console.log("window");
+      window.alert("hii");
+      /*
+      window is an another built-in object that describes the entire browser window
+      for every code writing infornt of dpcument.body.... ,console.log , alert for all functions we have to put window infront of all code
+      but JS automatically adds window
+      */
+
+      function costkeydown(event) {
+        if (event.key === "Enter") Calculation();
+      }
+      function Calculation() {
+        const innerElement = document.querySelector(".cost-input");
+        let cost = Number(innerElement.value);
+        //value got from the input is usaully be as string
+        //so we have it into number using Number function
+        //for accessing input search-box dont use innerHTML use value
+        if (cost <= 40) {
+          cost += 10;
+          console.log(cost);
+        }
+        document.querySelector(".cost-result").innerHTML = cost;
+      }
+      function Subscribe() {
+        let button_Element1 = document.querySelector(".js-button1");
+        if (button_Element1.innerHTML === "Subscribe")
+          button_Element1.innerHTML = "Subscribed";
+        else button_Element1.innerHTML = "Subscribe";
+      }
+    </script>
+  </body>
+</html>

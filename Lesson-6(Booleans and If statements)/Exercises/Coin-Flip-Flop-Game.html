@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6a</title>
+  </head>
+  <body>
+    <button
+      onclick="
+      let ran = Math.random();
+    console.log(ran);
+    let result = ' ';
+    if (ran < 0.5) result = 'Heads';
+    else result = 'Tails';
+      if('Heads'===result)
+      alert(`You Won the Toss\nCoin Flipped as ${result}`);
+    else
+    alert(`You lost the Toss\nCoin Flipped as ${result}`);
+    "
+    >
+      HEADS
+    </button>
+    <button
+      onclick="let ran2=Math.random();
+    console.log(ran2);
+    let result2=(ran2<0.5)?'Heads':'Tails';//using ternary Operator
+if(result2==='Tails')
+alert(`You Won the Toss\nCoin Flipped as ${result2}`);
+else
+alert(`You Lost the Toss\nCoin Flipped as ${result2}`);
+    "
+    >
+      TAILS
+    </button>
+    <script></script>
+  </body>
+</html>

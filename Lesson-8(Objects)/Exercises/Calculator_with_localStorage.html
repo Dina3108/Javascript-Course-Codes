@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      button {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator -body">
+      <p
+        class="result-p"
+        style="border: solid 1px black; width: 170px; height: 20px"
+      ></p>
+      <p>
+        <button onclick="res(operation('1'))">1</button>
+        <button onclick="res(operation('2'))">2</button>
+        <button onclick="res(operation('3'))">3</button>
+        <button onclick="res(operation('+'));">+</button>
+        <button
+          onclick="res(calc=eval(calc));
+      localStorage.setItem('check',calc);
+      "
+        >
+          =
+        </button>
+      </p>
+      <p>
+        <button onclick="res(operation('4'))">4</button>
+        <button onclick="res(operation('5'))">5</button>
+        <button onclick="res(operation('6'))">6</button>
+        <button onclick="res(operation('-'));">-</button>
+        <button onclick="res(operation('.'))">.</button>
+      </p>
+      <p>
+        <button onclick="res(operation('7'))">7</button>
+        <button onclick="res(operation('8'))">8</button>
+        <button onclick="res(operation('9'))">9</button>
+        <button onclick="res(operation('*'));">*</button>
+        <button onclick="res(operation('0'));">0</button>
+      </p>
+      <p>
+        <button onclick="res(operation('10'))">10</button>
+        <button onclick="res(operation('100'))">100</button>
+        <button
+          onclick="res(operation('/'));"
+          style="padding-left: 18px; padding-right: 18px"
+        >
+          /
+        </button>
+        <button
+          onclick="calc=' ',res(calc),console.log('Calculations Cleared');"
+        >
+          C
+        </button>
+      </p>
+    </div>
+    <script>
+      let calc = " ";
+      function operation(op) {
+        return (calc += op);
+      }
+      localStorage.getItem("check");
+      console.log(localStorage.getItem("check"));
+      //here the evaluation will be stored in the local storage
+      //even after we refreshing the page it will be stored in the local storage
+      //it will be displayed in the console
+      function res(check) {
+        document.querySelector(".result-p").innerHTML = check;
+      }
+    </script>
+  </body>
+</html>

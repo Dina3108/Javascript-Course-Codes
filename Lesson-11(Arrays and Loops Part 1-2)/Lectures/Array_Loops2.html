@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      let arr = [10, 20, 30];
+      console.log(arr);
+      console.log(arr[0]);
+      arr[0] = 290;
+      console.log(arr);
+      console.log(typeof arr);
+      arr2 = [1, "hello", false, [2, 3], { salary: 90000 }];
+      console.log(arr2);
+      console.log(Array.isArray(arr));
+      console.log(arr.length);
+      arr.push(500);
+      console.log(arr);
+      arr.splice(1, 2);
+      console.log(arr);
+      let i = 0;
+
+      do {
+        console.log("name");
+        i++;
+      } while (i < 10);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <button onclick="console.log(`Cart Quantity:${cartq}`);">
+      Show Quantity
+    </button>
+    <button onclick="console.log(`Cart Quantity:${++cartq}`);">
+      Add to Cart
+    </button>
+    <button onclick="console.log(`Cart Quantity:${cartq+=2}`);">+2</button>
+    <button
+      onclick="cartq=cartq+3;
+    console.log(`Cart Quantity:${cartq};`)"
+    >
+      +3
+    </button>
+    <button
+      onclick="console.log('Cart Quantity is Reset\n',`Cart Quantity:${cartq=0};`);"
+    >
+      Reset Cart
+    </button>
+    <script>
+      let cartq = 0;
+      //naming varibales in various cases
+      let cartQuantity = 0; /*camel case =except first letter of the first word,In other words first letter will be capitalised*/
+      let CartQuantity = 0; /*pascal case =also first letter of the first word,In other words first letter will be capitalised*/
+      let cart_quantity = 0; //used to seperate words by using underscore(snake case)
+      //ways to create variables
+      const cartquantity = 0; /*this is another way to variable but the value in the variable wll'be constant can't be changed*/
+      var cart_Quantity = 0; //almost same as let to create variable
+      var string = "Dina";
+      console.log(typeof cartq);
+      console.log(typeof string);
+    </script>
+  </body>
+</html>

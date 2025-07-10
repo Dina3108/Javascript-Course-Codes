@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      .body-div {
+        background-color: lightblue;
+        height: 500px;
+      }
+      button {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body-div">
+      <input
+        class="key-input"
+        onkeydown="
+        res1(event);
+        ;
+      "
+      />
+      <p class="result"></p>
+      <p>
+        <button onclick="res(operation('1'))">1</button>
+        <button onclick="res(operation('2'))">2</button>
+        <button onclick="res(operation('3'))">3</button>
+        <button onclick="res(operation('+'));">+</button>
+        <button
+          onclick="res(calc=eval(calc));
+        localStorage.setItem('check',calc);
+        "
+          class="result"
+        >
+          =
+        </button>
+      </p>
+      <p>
+        <button onclick="res(operation('4'))">4</button>
+        <button onclick="res(operation('5'))">5</button>
+        <button onclick="res(operation('6'))">6</button>
+        <button onclick="res(operation('-'));">-</button>
+        <button onclick="res(operation('.'))">.</button>
+      </p>
+      <p>
+        <button onclick="res(operation('7'))">7</button>
+        <button onclick="res(operation('8'))">8</button>
+        <button onclick="res(operation('9'))">9</button>
+        <button onclick="res(operation('*'));">*</button>
+        <button onclick="res(operation('0'));">0</button>
+      </p>
+      <p>
+        <button onclick="res(operation('10'))">10</button>
+        <button onclick="res(operation('100'))">100</button>
+        <button onclick="res(operation('1000'))">1000</button>
+        <button onclick="res(operation('/'));">/</button>
+        <button
+          onclick=" calc=' '; res('0'),console.log('Calculations Cleared');"
+        >
+          C
+        </button>
+      </p>
+    </div>
+    <script>
+      let calc = " ";
+      function operation(op) {
+        calc += op;
+        return (document.querySelector(".result").innervalue = calc);
+      }
+      localStorage.getItem("check");
+      res(localStorage.getItem("check"));
+      //here the evaluation will be stored in the local storage
+      //even after we refreshing the page it will be stored in the local storage
+      //it will be displayed in the console
+      function res(check) {
+        document.querySelector(".result").innerHTML = check;
+      }
+      let cal = " ";
+      function res1(event) {
+        if (
+          (event.key >= 0 && event.key <= 9) ||
+          event.key === "+" ||
+          event.key === "-" ||
+          event.key === "*" ||
+          event.key === "/"
+        ) {
+          cal += event.key;
+          document.querySelector(".result").innerHTML = cal;
+        }
+        if (event.key === "Enter") {
+          let cal2 = eval(cal);
+          document.querySelector(".result").innerHTML = cal2;
+          cal = " ";
+        }
+      }
+    </script>
+  </body>
+</html>

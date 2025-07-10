@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      /*
+      function function1() {
+        //function definition
+        console.log("Hello");
+        console.log(2 + 2);
+      }
+      function1(); //function calling...Definition inside the function only executed when the function is called
+      function1();*/
+      function calculateTax(tax) {
+        console.log(tax * 0.1);
+      }
+      calculateTax(200);
+      function calculateTax2(tax, percent = 0.2) {
+        console.log(tax * percent);
+      }
+      calculateTax2(400);
+      function calculateTax3(tax, percent) {
+        console.log(tax * percent);
+      }
+      calculateTax3(300, 0.3);
+    </script>
+  </body>
+</html>

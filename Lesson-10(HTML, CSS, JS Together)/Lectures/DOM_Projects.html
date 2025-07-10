@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM-Projects</title>
+    <style>
+      .js-subscribe-button {
+        background-color: gray;
+        color: white;
+        /* 
+        backgorund-color:transparent;
+        means it will make merge color to its background-body color
+        */
+      }
+      /* here the above added class in js works when button is onclicked
+      it works like active version of the button*/
+    </style>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <!--
+    we can name as in multiple number also but have to seperate with gap we can style with any one of the class name-->
+    <button class="js-button1 Subscribe-button" onclick="Subscribe()">
+      Subscribe
+    </button>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping</p>
+    <p>Orders over $40 = FREE Shipping</p>
+    <input
+      type="search"
+      placeholder="Cost of Order"
+      class="cost-input"
+      onkeydown="console.log(event); //this will give the all information aboutthe keypress 
+      console.log(event.key); //this will only the specific information needed 
+      costkeydown(event);
+  "
+    />
+    <button onclick="Calculation();">Calculate</button>
+    <p class="cost-result"></p>
+    <script src="DOM_Projects_JS.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5a</title>
+  </head>
+  <body>
+    <button onclick="console.log(`Cart Quantity:${cartq}`);">
+      Show Quantity
+    </button>
+    <button onclick="console.log(`Cart Quantity:${++cartq}`);">
+      Add to Cart
+    </button>
+    <button onclick="console.log(`Cart Quantity:${cartq+=2}`);">+2</button>
+    <button
+      onclick="cartq=cartq+3;
+      console.log(`Cart Quantity:${cartq};`)"
+    >
+      +3
+    </button>
+    <button
+      onclick="console.log('Cart Quantity is Reset\n',`Cart Quantity:${cartq=0};`);"
+    >
+      Reset Cart
+    </button>
+    <button onclick="cartq+=4,console.log(`Cart Quantity:${cartq}`);">
+      +4
+    </button>
+    <button onclick="console.log(`Cart Quantity:${cartq+=5};`)">+5</button>
+    <button onclick="console.log(`Cart Quantity:${--cartq};`)">-1</button>
+    <button onclick="console.log(`Cart Quantity:${cartq-=2};`)">-2</button>
+    <button onclick="console.log(`Cart Quantity:${cartq-=3};`)">-3</button>
+    <script>
+      let cartq = 0;
+      let name = "Dinakar";
+      console.log(`My name is:${name}`);
+      let cost = 5 + 2 * 3 + 9;
+      console.log(`Cost of food:$${cost}`);
+      let tax = cost * 0.1;
+      console.log(`Tax(10%):$${tax}`);
+      let total = cost + tax;
+      console.log(`Total cost:$${total}`);
+    </script>
+  </body>
+</html>

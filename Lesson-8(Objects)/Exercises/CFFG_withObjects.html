@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6a</title>
+  </head>
+  <body>
+    <button
+      onclick="
+    playGame('Heads');
+    "
+    >
+      HEADS
+    </button>
+    <button
+      onclick="
+    playGame('Tails');
+    "
+    >
+      TAILS
+    </button>
+    <button
+      onclick="
+    localStorage.removeItem('check');
+    console.log(score);
+    //here for intitalizing again to zero first click the reset score button
+    //then refresh the page
+    //score will start from zero
+    "
+    >
+      Reset score
+    </button>
+    <script>
+      let score = JSON.parse(localStorage.getItem("check"));
+      if (score === null) {
+        score = {
+          wins: 0,
+          losses: 0,
+        };
+      }
+      function playGame(guess) {
+        let ran = Math.random();
+        console.log(ran);
+        let result;
+        if (ran < 0.5) result = "Heads";
+        else result = "Tails";
+        if (guess === result) {
+          alert(`You Won the Toss\nCoin Flipped as ${result}`);
+          score.wins += 1;
+        } else {
+          alert(`You lost the Toss\nCoin Flipped as ${result}`);
+          score.losses += 1;
+        }
+        localStorage.setItem("check", JSON.stringify(score));
+        console.log(`Wins:${score.wins} Losses:${score.losses}`);
+      }
+    </script>
+  </body>
+</html>

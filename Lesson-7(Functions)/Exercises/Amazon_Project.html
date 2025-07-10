@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5a</title>
+  </head>
+  <body>
+    <button onclick="console.log(`Cart Quantity:${cartq}`);">
+      Show Quantity
+    </button>
+    <button
+      onclick="
+if(cartq>=10)
+alert('The Cart is Full');
+else if(cartq>=0&&cartq<=10)
+    console.log(`Cart Quantity:${cartq+=1}`);"
+    >
+      Add to Cart
+    </button>
+    <button
+      onclick="
+    if(cartq>=10)
+    alert('The Cart is Full');
+    else if(cartq>=0&&cartq<=10)
+    {
+        if(cartq>8)
+        alert('Can\'t Add 2 Items.Cart will get Full')
+    else
+        console.log(`Cart Quantity:${cartq+=2}`);}"
+    >
+      +2
+    </button>
+    <button
+      onclick="
+    if(cartq>=10)
+    alert('The Cart is Full');
+    else if(cartq>=0&&cartq<=10)
+    {
+        if(cartq>7)
+        alert('Can\'t Add 3 Items.Cart will get Full')
+    else
+        console.log(`Cart Quantity:${cartq+=3}`);}"
+    >
+      +3
+    </button>
+    <button
+      onclick="console.log('Cart Quantity is Reset\n',`Cart Quantity:${cartq=0};`);"
+    >
+      Reset Cart
+    </button>
+    <button
+      onclick="
+    if(cartq>=10)
+    alert('The Cart is Full');
+    else if(cartq>=0&&cartq<=10)
+    {
+        if(cartq>6)
+        alert('Can\'t Add 4 Items.Cart will get Full');
+    else
+        console.log(`Cart Quantity:${cartq+=4}`);}"
+    >
+      +4
+    </button>
+    <button
+      onclick="
+    if(cartq>=10)
+    alert('The Cart is Full');
+    else if(cartq>=0&&cartq<=10)
+    {
+        if (cartq>5)
+        alert('Can\'t Add 5 Items.Cart will get Full');
+    else
+        console.log(`Cart Quantity:${cartq+=5}`);}"
+    >
+      +5
+    </button>
+    <button
+      onclick="
+    if(cartq<=0)
+    alert('Not Enough Items in the Cart');
+    else if(cartq>=0&&cartq<=10)
+        console.log(`Cart Quantity:${cartq-=1}`);"
+    >
+      -1
+    </button>
+    <button
+      onclick="
+    if(cartq<=0)
+    alert('Not Enough Items in the Cart');
+    else if(cartq>=0&&cartq<=10)
+    {
+        if(cartq<2)
+        console.log(`Cart Quantity:${cartq=0}`)
+    else
+    console.log(`Cart Quantity:${cartq-=2}`);}"
+    >
+      -2
+    </button>
+    <button
+      onclick="
+    if(cartq<=0)
+    alert('Not Enough Items in the Cart');
+    else if(cartq>=0&&cartq<=10)
+    {
+        if(cartq<3)
+        console.log(`Cart Quantity:${cartq=0}`)
+    else
+    console.log(`Cart Quantity:${cartq-=3}`);}"
+    >
+      -3
+    </button>
+    <script>
+      let cartq = 0;
+      /*
+      let name = "Dinakar";
+      console.log(`My name is:${name}`);
+      let cost = 5 + 2 * 3 + 9;
+      console.log(`Cost of food:$${cost}`);
+      let tax = cost * 0.1;
+      console.log(`Tax(10%):$${tax}`);
+      let total = cost + tax;
+      console.log(`Total cost:$${total}`);*/
+    </script>
+  </body>
+</html>
