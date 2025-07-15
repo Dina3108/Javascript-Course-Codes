@@ -23,3 +23,52 @@ console.log(a.getTime());
 a.setDate(1);
 a.setFullYear(2067);
 console.log(a);
+//like below we can do operations with datetime objects also
+console.log(new Date(218289210) === new Date(2182892100));
+
+//closures in functions
+function fun1() {
+  let b3 = 90;
+  function fun2() {
+    //but inner function can access variables from outer function
+    console.log(b3);
+  }
+  fun2();
+}
+//in below we cant access the variables defined inside a function becauseof closure problem
+//console.log(b3);
+fun1();
+
+function create_game() {
+  let score = 0;
+  function increase_score(points) {
+    score += points;
+    console.log(`${points}pts`);
+  }
+  function decrease_score(points) {
+    score -= points;
+    console.log(`${points}pts`);
+  }
+  function get_score() {
+    return score;
+  }
+  //below returns an object where here below in the object all are methods
+  return { increase_score, decrease_score, get_score };
+}
+//from the above function we can create object
+const game = create_game();
+game.increase_score(20);
+game.decrease_score(5);
+console.log(game.get_score());
+
+/*
+setTimeout - function in Javascript that allows you to schedule
+             the execution of a function after an amount of time (milliseconds)
+             Times are approximate (varies based on the workload of the Javascript runtime of any file)
+             
+             syntax : setTimeout(callback,delay)
+*/
+function say_hello() {
+  console.log("Vankkam da Mapla!!!");
+}
+setTimeout(say_hello, 3000);
